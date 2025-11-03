@@ -36,9 +36,8 @@ df["ExAng"] = df["ExAng"].replace(
 df["Target"] = df["Target"].replace(
     {0:"False" , 1:"True" }
 )
+#as
 
-for i in df :
-    print(i)
 # columns = ["Age", "Sex" , "RestBP" , "Chol", "Fbs", "RestECG", "MaxHR", "ExAng", "Oldpeak" , "Slope", "Ca", "Target"]
 # # No outlier in Age column
 # # There are 8 outliers in RestBP but I will not remove them as they might be considered indicators of a heart disease case
