@@ -38,22 +38,22 @@ df["Target"] = df["Target"].replace(
 )
 #as
 
-# columns = ["Age", "Sex" , "RestBP" , "Chol", "Fbs", "RestECG", "MaxHR", "ExAng", "Oldpeak" , "Slope", "Ca", "Target"]
-# # No outlier in Age column
-# # There are 8 outliers in RestBP but I will not remove them as they might be considered indicators of a heart disease case
-# # There are 5 outliers in Chol but I removed only four of them. That is, the outlier 394 is a very high cholestrol level but it might indicate a heart disease.
+columns = ["Age", "RestBP" , "Chol", "MaxHR", "Oldpeak" , "Slope", "Ca"]
+# No outlier in Age column
+# There are 8 outliers in RestBP but I will not remove them as they might be considered indicators of a heart disease case
+# There are 5 outliers in Chol but I removed only four of them. That is, the outlier 394 is a very high cholestrol level but it might indicate a heart disease.
 
-# for col in columns:
-#     plt.figure(figsize = (5,4))
-#     df.boxplot(column = col)
-#     plt.title(f"{col}")
-#     plt.ylabel(col)
-#     plt.show()
+for col in columns:
+    plt.figure(figsize = (5,4))
+    df.boxplot(column = col)
+    plt.title(f"{col}")
+    plt.ylabel(col)
+    plt.show()
 
 
-# for i in df["Chol"]:
-#     if i > 360:
-#         print(i)
+for i in df["Chol"]:
+    if i > 360:
+        print(i)
         
 
 
